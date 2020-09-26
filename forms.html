@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- meta tags   -->
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+
+    <!-- Adding bootstrap link   -->
+	<link rel="stylesheet"  href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/forms.css">
+	<title>Data Collection Form</title>
+</head>
+<body>
+	<form>
+		<h3 class="align-self-center">DATA COLLECTION FORM</h3>
+		<div class="container form-container">
+			<div class="form-group row">
+				<label class="col-md-2 col-form-label" for="ipNumber">
+					I.P No
+				</label>
+					<input type="number" id="ipNumber" class="col-md-4" placeholder="Enter IP Number">
+				<label class="col-md-2 col-form-label" for="docNumber">
+					Document No
+				</label>
+					<input type="text" id="docNumber" class="col-md-4" placeholder="Enter Document Number">
+			</div>
+		</div>
+
+
+		<label for="DemographicDetails">
+			Demographic Details: 
+		</label>
+		<input type="checkbox" name="DemographicDetails" id="DemographicDetails" value="no" onchange="DemographicFunction()">
+		<div class="container form-container" id="Demographic">
+			<div class="form-group row">	
+				<label class="col-md-2 col-form-label" for="Age">
+					Maternal Age
+				</label>
+					<input type="number" class="col-md-1" id="Age">
+				<label class="col-md-2 col-form-label" for="Height">
+					Height (cm)
+				</label>
+					<input type="number" class="col-md-1" id="Height">
+				<label class="col-md-2 col-form-label" for="Weight">
+					Weight(kg)
+				</label>
+					<input type="number" step="any" class="col-md-1" id="Weight">
+				<label class="col-md-2 col-form-label" for="BMI">
+					BMI
+				</label>
+					<input type="number" class="col-md-1" step="any" id="BMI">
+			</div>
+			<div class="form-group row">
+				<label class="col-form-label col-md-2">
+					Occupation
+				</label>
+				<div class="col-md-2 custom-control-inline">
+				<input type="radio" class="form-check-input" name="HW" id="HW">
+				<label for="HW" class="form-check-label">House Wife</label>
+				</div>
+				<div class="col-md-2 custom-control-inline">
+				<input type="radio" class="form-check-input" name="Labour" id="Labour">
+				<label for="Labour" class="form-check-label">Labourer</label>
+				</div>
+				<div class="col-md-2 custom-control-inline">
+				<input type="radio" class="form-check-input" name="Agri" id="Agri">
+				<label for="Agri" class="form-check-label">Agriculture</label>
+				</div>
+				<div class="col-md-2 custom-control-inline">
+				<input type="radio" class="form-check-input" name="Busi" id="Busi">
+				<label for="Busi" class="form-check-label">Business</label>
+				</div>
+				<div class="col-md-1 custom-control-inline">
+				<input type="radio" class="form-check-input" name="OT" id="OT">
+				<label for="OT" class="form-check-label">Others</label>
+				</div>
+			</div>
+			<div class="form-group row"> 
+				<label class="col-form-label col-md-3">
+					Residence
+				</label>
+				<div class="col-md-2 custom-control-inline">
+				<input type="radio" class="form-check-input" name="Urban" id="Urban">
+				<label for="Urban" class="form-check-label">Urban</label>
+				</div>
+				<div class="col-md-2 custom-control-inline">
+				<input type="radio" class="form-check-input" name="Slum" id="Slum">
+				<label for="Slum" class="form-check-label">Slum</label>
+				</div>
+				<div class="col-md-2 custom-control-inline">
+				<input type="radio" class="form-check-input" name="Rural" id="Rural">
+				<label for="Rural" class="form-check-label">Rural</label>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-form-label col-md-2">
+					Education Level
+				</label>
+				<div class="col-md-2 custom-control-inline">
+				<input type="radio" class="form-check-input" name="Illiterate" id="Illiterate">
+				<label for="Illiterate" class="form-check-label">Illiterate</label>
+				</div>
+				<div class="col-md-2 custom-control-inline">
+				<input type="radio" class="form-check-input" name="Primary" id="Primary">
+				<label for="Primary" class="form-check-label">Primary</label>
+				</div>
+				<div class="col-md-2 custom-control-inline">
+				<input type="radio" class="form-check-input" name="Secondary" id="Secondary">
+				<label for="Secondary" class="form-check-label">Secondary</label>
+				</div>
+				<div class="col-md-2 custom-control-inline">
+				<input type="radio" class="form-check-input" name="Graduate" id="Graduate">
+				<label for="Graduate" class="form-check-label">Graduate</label>
+				</div>
+				<div class="col-md-1 custom-control-inline">
+				<input type="radio" class="form-check-input" name="Post Graduate" id="Post Graduate">
+				<label for="Post Graduate" class="form-check-label">Post Graduate</label>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-form-label col-md-2">
+					Socio-Economic Status
+				</label>
+				<div class="col-md-2 custom-control-inline">
+				<input type="radio" class="form-check-input" name="Upper" id="Upper">
+				<label for="Upper" class="form-check-label">Upper</label>
+				</div>
+				<div class="col-md-2 custom-control-inline">
+				<input type="radio" class="form-check-input" name="Upper-Middle" id="Upper-Middle">
+				<label for="Upper-Middle" class="form-check-label">Upper-Middle</label>
+				</div>
+				<div class="col-md-2 custom-control-inline">
+				<input type="radio" class="form-check-input" name="Middle" id="Middle">
+				<label for="Middle" class="form-check-label">Middle</label>
+				</div>
+				<div class="col-md-2 custom-control-inline">
+				<input type="radio" class="form-check-input" name="Lower-Middle" id="Lower-Middle">
+				<label for="Lower-Middle" class="form-check-label">Lower-Middle</label>
+				</div>
+				<div class="col-md-1 custom-control-inline">
+				<input type="radio" class="form-check-input" name="Lower" id="Lower">
+				<label for="Lower" class="form-check-label">Lower</label>
+				</div>
+			</div>
+		</div>
+
+
+
+
+		<label for="ObstetricsHistory">
+			Obstetrics History : 
+		</label>
+		<input type="checkbox" name="ObstetricsHistory" id="ObstetricsHistory" value="no" onchange="ObstetricsFunction()">
+		<div class="container form-container" id="Obstetrics">
+			<div class="form-group row"> 
+				<label class="col-form-label col-md-6">
+					Hypertension in Previous Pregnancy
+				</label>
+				<div class="col-md-2 custom-control-inline">
+				<input type="radio" class="form-check-input" name="Yes" id="YesHIPP">
+				<label for="YesHIPP" class="form-check-label">Yes</label>
+				</div>
+				<div class="col-md-2 custom-control-inline">
+				<input type="radio" class="form-check-input" name="No" id="NoHIPP">
+				<label for="NoHIPP" class="form-check-label">No</label>
+				</div>
+			</div>
+			<div class="form-group row"> 
+				<label class="col-form-label col-md-6">
+					Previous History of Abortions
+				</label>
+				<div class="col-md-2 custom-control-inline">
+				<input type="radio" class="form-check-input" name="Yes" id="YesPHOA">
+				<label for="YesPHOA" class="form-check-label">Yes</label>
+				</div>
+				<div class="col-md-2 custom-control-inline">
+				<input type="radio" class="form-check-input" name="No" id="NoPHOA">
+				<label for="NoPHOA" class="form-check-label">No</label>
+				</div>
+			</div>
+			<div class="form-group row"> 
+				<label class="col-form-label col-md-6">
+					Previous History of still births
+				</label>
+				<div class="col-md-2 custom-control-inline">
+				<input type="radio" class="form-check-input" name="Yes" id="YesPHOSA">
+				<label for="YesPHOSA" class="form-check-label">Yes</label>
+				</div>
+				<div class="col-md-2 custom-control-inline">
+				<input type="radio" class="form-check-input" name="No" id="NoPHOSA">
+				<label for="NoPHOSA" class="form-check-label">No</label>
+				</div>
+			</div>
+			<div class="form-group row"> 
+				<label class="col-form-label col-md-6">
+					Previous History of Preterm Delivery
+				</label>
+				<div class="col-md-2 custom-control-inline">
+				<input type="radio" class="form-check-input" name="Yes" id="YesPHOPD">
+				<label for="YesPHOPD" class="form-check-label">Yes</label>
+				</div>
+				<div class="col-md-2 custom-control-inline">
+				<input type="radio" class="form-check-input" name="No" id="NoPHOPD">
+				<label for="NoPHOPD" class="form-check-label">No</label>
+				</div>
+			</div>
+			<div class="form-group row"> 
+				<label class="col-form-label col-md-6">
+					Gravidity
+				</label>
+				<div class="col-md-2 custom-control-inline">
+				<input type="radio" class="form-check-input" name="Primigravida" id="Primigravida">
+				<label for="Primigravida" class="form-check-label">Primigravida</label>
+				</div>
+				<div class="col-md-2 custom-control-inline">
+				<input type="radio" class="form-check-input" name="Multigravida" id="Multigravida">
+				<label for="Multigravida" class="form-check-label">Multigravida</label>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-md-6 col-form-label" for="GestationalAge">
+					Gestational Age (in weeks)
+				</label>
+					<input type="number" id="GestationalAge" class="col-md-4" placeholder="Enter your Gestational Age">
+			</div>
+			<div class="form-group row">
+				<label class="col-md-5 col-form-label" for="r1">
+					Reading 1
+				</label>
+				<div id="r1">
+					<input type="number" id="r1mm" class="col-md-2">/<input class="col-md-2" id="r1hg" type="number">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-md-5 col-form-label" for="r2">
+					Reading 2
+				</label>
+				<div id="r2">
+					<input type="number" id="r2mm" class="col-md-2">/<input class="col-md-2" id="r2hg" type="number">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-md-5 col-form-label" for="r3">
+					Reading 3
+				</label>
+				<div id="r3">
+					<input type="number" id="r3mm" class="col-md-2">/<input class="col-md-2" id="r3hg" type="number">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-md-5 col-form-label" for="AverageReading">
+					Average
+				</label>
+				<div id="AverageReading">
+					<input type="number" id="avgmm" class="col-md-2">/<input class="col-md-2" id="avghg" type="number">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-md-5 col-form-label" for="uric">
+					Uric Acid (mg/dL)
+				</label>
+				<div id="uric">
+					<input type="number" id="uricMG" class="col-md-2">/<input class="col-md-2" id="uricDL" type="number">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-md-5 col-form-label" for="LDH">
+					LDH (IU/I)
+				</label>
+				<div id="LDH">
+					<input type="number" id="LDHiu" class="col-md-2">/<input class="col-md-2" id="LDHi" type="number">
+				</div>
+			</div>
+		</div>
+
+
+		<label for="PreeclampsiaSymptoms">
+			Preeclampsia / Eclampsia Symptoms : 
+		</label>
+		<input type="checkbox" name="PreeclampsiaSymptoms" id="PreeclampsiaSymptoms" value="no" onchange="SymptomsFunction()">
+		<div class="container form-container" id="Symptoms">
+			<div class="form-group row">
+				<div class="col-md-2 custom-control-inline">	
+					<input type="checkbox" class="form-check-input" name="EpiPain" id="EpiPain" value="Epigastric Pain">
+					<label for="EpiPain" class="form-check-label">Epigastric Pain</label>
+				</div>
+				<div class="col-md-2 custom-control-inline">
+					<input type="checkbox" class="form-check-input" name="BlurVision" id="BlurVision" value="Blurred Vision">
+					<label for="BlurVision" class="form-check-label">Blurred Vision</label>
+				</div>
+				<div class="col-md-2 custom-control-inline">
+					<input type="checkbox" class="form-check-input" name="Vomit" id="Vomit" value="Vomitting">
+					<label for="Vomit" class="form-check-label">Vomitting</label>
+				</div>
+				<div class="col-md-2 custom-control-inline">
+					<input type="checkbox" class="form-check-input" name="Headache" id="Headache" value="Headache">
+					<label for="Headache" class="form-check-label">Headache</label>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-md-5 col-form-label" for="OtherPES">
+					If any other, specify
+				</label>
+					<input type="text" id="OtherPES" class="col-md-7" placeholder="Other Symptoms">
+			</div>
+		</div>
+
+		<label for="MaternalComplication">
+			Preeclampsia / Eclampsia Symptoms : 
+		</label>
+		<input type="checkbox" name="MaternalComplication" id="MaternalComplication" value="no" onchange="ComplicationFunction()">
+		<div class="container form-container" id="Complication">
+			<div class="form-group row">
+				<div class="col-md-2 custom-control-inline">	
+					<input type="checkbox" class="form-check-input" name="IsoThrom" id="IsoThrom" value="Isolated Thrombocytopenia">
+					<label for="IsoThrom" class="form-check-label">Isolated Thrombocytopenia</label>
+				</div>
+				<div class="col-md-2 custom-control-inline">	
+					<input type="checkbox" class="form-check-input" name="Convulsion" id="Convulsion" value="Convulsion">
+					<label for="Convulsion" class="form-check-label">Convulsion</label>
+				</div>
+				<div class="col-md-2 custom-control-inline">	
+					<input type="checkbox" class="form-check-input" name="DIC" id="DIC" value="Disseminated Intravascular Coagulation">
+					<label for="DIC" class="form-check-label">Disseminated Intravascular Coagulation</label>
+				</div>
+				<div class="col-md-2 custom-control-inline">	
+					<input type="checkbox" class="form-check-input" name="RF" id="RF" value="Renial Failure">
+					<label for="RF" class="form-check-label">Renial Failure</label>
+				</div>
+				<div class="col-md-2 custom-control-inline">	
+					<input type="checkbox" class="form-check-input" name="PE" id="PE" value="Pulmonary edema">
+					<label for="PE" class="form-check-label">Pulmonary edema</label>
+				</div>
+				<div class="col-md-2 custom-control-inline">	
+					<input type="checkbox" class="form-check-input" name="CA" id="CA" value="Cardiorepiratory Arrest">
+					<label for="CA" class="form-check-label">Cardiorepiratory Arrest</label>
+				</div>
+				<div class="col-md-2 custom-control-inline">	
+					<input type="checkbox" class="form-check-input" name="PlacentalAbruption" id="PlacentalAbruption" value="Placental Abruption">
+					<label for="PlacentalAbruption" class="form-check-label">Placental Abruption</label>
+				</div>
+				<div class="col-md-2 custom-control-inline">	
+					<input type="checkbox" class="form-check-input" name="PostpartumHemorrage" id="PostpartumHemorrage" value="Postpartum Hemorrage">
+					<label for="PostpartumHemorrage" class="form-check-label">Postpartum Hemorrage</label>
+				</div>
+				<div class="col-md-2 custom-control-inline">	
+					<input type="checkbox" class="form-check-input" name="AntepartumHemorrage" id="AntepartumHemorrage" value="Antepartum Hemorrage">
+					<label for="AntepartumHemorrage" class="form-check-label">Antepartum Hemorrage</label>
+				</div>
+				<div class="col-md-2 custom-control-inline">	
+					<input type="checkbox" class="form-check-input" name="Jaundice" id="Jaundice" value="Jaundice">
+					<label for="Jaundice" class="form-check-label">Jaundice</label>
+				</div>
+				<div class="col-md-2 custom-control-inline">	
+					<input type="checkbox" class="form-check-input" name="HELLPSyndrome" id="HELLPSyndrome" value="HELLP Syndrome">
+					<label for="HELLPSyndrome" class="form-check-label">HELLP Syndrome</label>
+				</div>
+				<div class="col-md-2 custom-control-inline">	
+					<input type="checkbox" class="form-check-input" name="ARDS" id="ARDS" value="Acute Respiratory Distress Syndrome">
+					<label for="ARDS" class="form-check-label">Acute Respiratory Distress Syndrome</label>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-md-5 col-form-label" for="OtherMC">
+					If any other, specify
+				</label>
+					<input type="text" id="OtherMC" class="col-md-7" placeholder="Other Symptoms">
+			</div>
+		</div>
+
+
+
+		<label for="PerinatalOutcome">
+			Preeclampsia / Eclampsia Symptoms : 
+		</label>
+		<input type="checkbox" name="PerinatalOutcome" id="PerinatalOutcome" value="no" onchange="OutcomeFunction()">
+		<div class="container form-container" id="Outcome">
+			<div class="form-group row"> 
+				<label class="col-form-label col-md-6">
+					Period of Gestation
+				</label>
+				<div class="col-md-2 custom-control-inline">
+				<input type="radio" class="form-check-input" name="Preterm" id="Preterm">
+				<label for="Preterm" class="form-check-label">Preterm</label>
+				</div>
+				<div class="col-md-2 custom-control-inline">
+				<input type="radio" class="form-check-input" name="Term" id="Term">
+				<label for="Term" class="form-check-label">Term</label>
+				</div>
+			</div>
+			<div class="form-group row"> 
+				<label class="col-form-label col-md-6">
+					Mode of Delivery
+				</label>
+				<div class="col-md-2 custom-control-inline">
+				<input type="radio" class="form-check-input" name="NVD" id="NVD">
+				<label for="NVD" class="form-check-label">Normal Vaginal Delivery</label>
+				</div>
+				<div class="col-md-2 custom-control-inline">
+				<input type="radio" class="form-check-input" name="CaesarenSection" id="CaesarenSection">
+				<label for="CaesarenSection" class="form-check-label">Caesaren Section</label>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-md-6 col-form-label" for="BabyWeight">
+					Baby Weight (in kgs)
+				</label>
+					<input type="number" step="any" id="BabyWeight" class="col-md-4" placeholder="Enter the Baby's Weight">
+			</div>
+		</div>
+
+
+
+		<div class="container form-container">
+			<div class="form-group row">
+				<label class="col-md-6 col-form-label" for="DataCollector">
+					Name
+				</label>
+				<input type="text" id="DataCollector" class="col-md-4" placeholder="Enter the Data Collector's Name">
+			</div>
+			<div class="form-group row">
+				<label class="col-md-6 col-form-label" for="DataCollectorDesignation">
+					Designation
+				</label>
+				<input type="text" id="DataCollectorDesignation" class="col-md-4" placeholder="Enter the Data Collector's Designation">
+			</div>
+			<div class="form-group row">
+				<label class="col-md-6 col-form-label" for="DataCollectorDept">
+					Department
+				</label>
+				<input type="text" id="DataCollectorDept" class="col-md-4" placeholder="Enter the Data Collector's Department">
+			</div>
+			<div class="form-group row">
+				<label class="col-md-6 col-form-label" for="DateCollection">
+					Date of Collection
+				</label>
+				<input type="date" id="DateCollection" class="col-md-4">
+			</div>
+			<div class="form-group row">
+				<label class="col-md-6 col-form-label" for="DataCollectorSign">
+					Signature Image
+				</label>
+				<input type="file" id="DataCollectorSign" name="DataCollectorSign" accept="image/*" class="col-md-4">
+			</div>
+		</div>
+	</form>
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+	     https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-analytics.js"></script>
+
+	<script>
+	  // Your web app's Firebase configuration
+	  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+	  var firebaseConfig = {
+	    apiKey: "AIzaSyDgUWtOMytATqKweJLyNwmzhCQzChq9-08",
+	    authDomain: "doctorsearch-5737d.firebaseapp.com",
+	    databaseURL: "https://doctorsearch-5737d.firebaseio.com",
+	    projectId: "doctorsearch-5737d",
+	    storageBucket: "doctorsearch-5737d.appspot.com",
+	    messagingSenderId: "871947561807",
+	    appId: "1:871947561807:web:c73cda341657cc6fe5b33a",
+	    measurementId: "G-6WVZPPW29V"
+	  };
+	  // Initialize Firebase
+	  firebase.initializeApp(firebaseConfig);
+	  firebase.analytics();
+	</script>
+
+	<!--  Script File  -->
+	<script src="js/forms.js"></script>
+</body>
+</html
