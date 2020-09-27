@@ -8,23 +8,23 @@
 
 
     <!-- Adding bootstrap link   -->
-	<link rel="stylesheet"  href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/forms.css">
+	<link rel="stylesheet"  href="bootstrap.min.css">
+	<link rel="stylesheet" href="forms.css">
 	<title>Data Collection Form</title>
 </head>
 <body>
-	<form>
+	<form method="post">
 		<h3 class="align-self-center">DATA COLLECTION FORM</h3>
 		<div class="container form-container">
 			<div class="form-group row">
 				<label class="col-md-2 col-form-label" for="ipNumber">
 					I.P No
 				</label>
-					<input type="number" id="ipNumber" class="col-md-4" placeholder="Enter IP Number">
-				<label class="col-md-2 col-form-label" for="docNumber">
+					<input type="number" id="ipNumber" name="ip" class="col-md-4" placeholder="Enter IP Number">
+				<label class="col-md-2 col-form-label"  for="docNumber">
 					Document No
 				</label>
-					<input type="text" id="docNumber" class="col-md-4" placeholder="Enter Document Number">
+					<input type="text" id="docNumber" name="doc" class="col-md-4" placeholder="Enter Document Number">
 			</div>
 		</div>
 
@@ -38,19 +38,19 @@
 				<label class="col-md-2 col-form-label" for="Age">
 					Maternal Age
 				</label>
-					<input type="number" class="col-md-1" id="Age">
+					<input type="number" class="col-md-1" id="Age" name="age"> 
 				<label class="col-md-2 col-form-label" for="Height">
 					Height (cm)
 				</label>
-					<input type="number" class="col-md-1" id="Height">
+					<input type="number" class="col-md-1" id="Height" name="height">
 				<label class="col-md-2 col-form-label" for="Weight">
 					Weight(kg)
 				</label>
-					<input type="number" step="any" class="col-md-1" id="Weight">
+					<input type="number" step="any" class="col-md-1" id="Weight" name="weight">
 				<label class="col-md-2 col-form-label" for="BMI">
 					BMI
 				</label>
-					<input type="number" class="col-md-1" step="any" id="BMI">
+					<input type="number" class="col-md-1" step="any" id="BMI" name="bmi">
 			</div>
 			<div class="form-group row">
 				<label class="col-form-label col-md-2">
@@ -223,14 +223,14 @@
 				<label class="col-md-6 col-form-label" for="GestationalAge">
 					Gestational Age (in weeks)
 				</label>
-					<input type="number" id="GestationalAge" class="col-md-4" placeholder="Enter your Gestational Age">
+					<input type="number" name='gest' id="GestationalAge" class="col-md-4" placeholder="Enter your Gestational Age">
 			</div>
 			<div class="form-group row">
 				<label class="col-md-5 col-form-label" for="BloodPressure">
 					Blood Pressure (mm/Hg)
 				</label>
 				<div id="BloodPressure">
-					<input type="number" id="BloodPressuremm" class="col-md-2">/<input class="col-md-2" id="BloodPressurehg" type="number">
+					<input type="number" name='bpmm' id="BloodPressuremm" class="col-md-2">/<input name='bphg' class="col-md-2" id="BloodPressurehg" type="number">
 				</div>
 			</div>
 			<h4>Biomarkers</h4>
@@ -239,7 +239,7 @@
 					Uric Acid (mg/dL)
 				</label>
 				<div id="uric">
-					<input type="number" id="uricMG" class="col-md-2">/<input class="col-md-2" id="uricDL" type="number">
+					<input type="number" id="uricMG" name='uricmg' class="col-md-2">/<input name='uricdl' class="col-md-2" id="uricDL" type="number">
 				</div>
 			</div>
 			<div class="form-group row">
@@ -247,7 +247,7 @@
 					LDH (IU/I)
 				</label>
 				<div id="LDH">
-					<input type="number" id="LDHiu" class="col-md-2">/<input class="col-md-2" id="LDHi" type="number">
+					<input type="number" name='ldhui' id="LDHiu" class="col-md-2">/<input name='ldhi' class="col-md-2" id="LDHi" type="number">
 				</div>
 			</div>
 		</div>
@@ -380,7 +380,7 @@
 				<label class="col-md-6 col-form-label" for="BabyWeight">
 					Baby Weight (in kgs)
 				</label>
-					<input type="number" step="any" id="BabyWeight" class="col-md-4" placeholder="Enter the Baby's Weight">
+					<input type="number" name='bw' step="any" id="BabyWeight" class="col-md-4" placeholder="Enter the Baby's Weight">
 			</div>
 		</div>
 
@@ -391,38 +391,93 @@
 				<label class="col-md-6 col-form-label" for="DataCollector">
 					Name
 				</label>
-				<input type="text" id="DataCollector" class="col-md-4" placeholder="Enter the Data Collector's Name">
+				<input type="text" id="DataCollector"name='name' class="col-md-4" placeholder="Enter the Data Collector's Name">
 			</div>
 			<div class="form-group row">
 				<label class="col-md-6 col-form-label" for="DataCollectorDesignation">
 					Designation
 				</label>
-				<input type="text" id="DataCollectorDesignation" class="col-md-4" placeholder="Enter the Data Collector's Designation">
+				<input type="text" id="DataCollectorDesignation" name='desg'class="col-md-4" placeholder="Enter the Data Collector's Designation">
 			</div>
 			<div class="form-group row">
 				<label class="col-md-6 col-form-label" for="DataCollectorDept">
 					Department
 				</label>
-				<input type="text" id="DataCollectorDept" class="col-md-4" placeholder="Enter the Data Collector's Department">
+				<input type="text" id="DataCollectorDept"name='dept' class="col-md-4" placeholder="Enter the Data Collector's Department">
 			</div>
 			<div class="form-group row">
 				<label class="col-md-6 col-form-label" for="DateCollection">
 					Date of Collection
 				</label>
-				<input type="date" id="DateCollection" class="col-md-4">
+				<input type="date" id="DateCollection"name='coll'  class="col-md-4">
 			</div>
 			<div class="form-group row">
-				<label class="col-md-6 col-form-label" for="DataCollectorSign">
+				<label class="col-md-6 col-form-label"  for="DataCollectorSign">
 					Signature Image
 				</label>
 				<input type="file" id="DataCollectorSign" name="DataCollectorSign" accept="image/*" class="col-md-4">
 			</div>
-		</div>
-		<button type="submit" value="Submit" class="offset-3">Submit</button>
+        </div>
+        <input type="submit" name="add" value="SUBMIT">
 	</form>
 
 
 	<!--  Script File  -->
-	<script src="js/forms.js"></script>
+	<script src="forms.js"></script>
 </body>
-</html
+</html>
+<?php
+    require_once "pdo.php";
+	//session_start();
+	//echo($_POST['ip']);
+	echo('<a href="disp.php"><button > BACK </button></a>');
+    if(isset($_POST['ip'])  &&  isset($_POST['doc'])){
+		//echo("yes");
+        $stmt = $pdo->prepare('INSERT INTO patients
+        (ip_no,document_no,age,height,weight,bmi,occupation,residence,edulevel,se_status,hp_in_prevpreg,prev_his_abort,prev_his_sb,prev_his_pre_deli,gravidity,gest_age,bp_mm,bp_hg,uricacid_mg,uricacid_dl,ldh_iu,ldh_l,pes,mc,period_gest,baby_weight,mode_deli) 
+        VALUES ( :ip, :dc, :ag, :ht, :wt, :bmi, :oc, :re, :ed, :so, :hi, :pa, :ps, :pd, :gr, :ge, :bm, :bg, :ug, :ul, :lui, :li, :pes, :mc, :gp, :bw, :dm)');
+      $stmt->execute(array(
+        ':ip' => htmlentities($_POST['ip']),
+        ':dc' =>   htmlentities($_POST['doc'])  ,
+        ':ag' =>  htmlentities($_POST['age'])   ,
+        ':ht' =>   htmlentities($_POST['height'])   ,
+        ':wt' =>   htmlentities($_POST['weight'])   ,
+        ':bmi' =>    htmlentities($_POST['bmi'])  ,
+        ':oc' =>    htmlentities($_POST['Occ'])  ,
+        ':re' =>    htmlentities($_POST['Res'])  ,
+        ':ed' =>    htmlentities($_POST['Edu'])  ,
+        ':so' =>    htmlentities($_POST['Socio'])  ,
+        ':hi' =>   htmlentities($_POST['HIPP'])  ,
+        ':pa' =>     htmlentities($_POST['PHOA']),
+        ':ps' =>     htmlentities($_POST['PHOS']),
+        ':pd' =>    htmlentities($_POST['PHOPD']) ,
+        ':gr' =>    htmlentities($_POST['Gradi']) ,
+        ':ge' =>    htmlentities($_POST['gest']) ,
+        ':bm' =>    htmlentities($_POST['bpmm']) ,
+        ':bg' =>    htmlentities($_POST['bphg']) ,
+        ':ug' =>     htmlentities($_POST['uricmg']),
+        ':ul' =>     htmlentities($_POST['uricdl']),
+        ':lui' =>    htmlentities($_POST['ldhui']) ,
+        ':li' =>    htmlentities($_POST['ldhi']) ,
+        ':pes' =>     htmlentities($_POST['PESymptom']) ,
+        ':mc' =>    htmlentities($_POST['MComplication'])  ,
+        ':gp' =>     htmlentities($_POST['GestPeriod']) ,
+        ':bw' =>     htmlentities($_POST['bw']) ,
+        ':dm' =>    htmlentities($_POST['DeliveryMode'])  
+        )
+	  );
+	  
+		
+	}
+	if(isset($_POST['dept'])&&isset($_POST['name'])){
+		$stmts = $pdo->prepare('INSERT INTO dept
+  (name,desgn,dept,date,img) VALUES ( :nm, :id, :dg, :dp, :dt, :im)');
+$stmts->execute(array(
+  ':nm' =>htmlentities($_POST['name']),
+  ':dg' =>htmlentities($_POST['desg']),
+  ':dp' =>htmlentities($_POST['dept']),
+  ':dt' =>htmlentities($_POST['coll']),
+  ':im' =>htmlentities($_POST['DataCollectorSign']))
+);
+	}
+	?>
