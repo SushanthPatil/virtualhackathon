@@ -1,7 +1,7 @@
 <?php
 require_once "pdo.php";
 session_start();
-echo("<h1>DOCTORS LIST</h1>")
+echo("<h1>DOCTORS LIST</h1>");
 
 echo('<table border="1">'."\n");
 $stmt = $pdo->query("SELECT id,name,no_patients FROM doctors");
